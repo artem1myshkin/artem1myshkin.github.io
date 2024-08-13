@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+//ю-ай компонент для отображения статистики по окончанию тренажера
 const Statistic = ({
     errors,
     totalWords,
@@ -15,7 +16,7 @@ const Statistic = ({
     const initial = {opacity: 0};
     const animate = {opacity: 1};
     const duration = {duration: 0.3};
-
+    //пока тренажер не закончил свою работу не показываем статистику
     if (state !== 'finish') {
         return null;
     }
@@ -33,7 +34,7 @@ const Statistic = ({
             >
                 Результат
             </motion.li>
-
+            //кол-во слов *2 = кол-во слов в минуту, тк длительность тренажера 30 сек
             <motion.li
                 initial={initial}
                 animate={animate}

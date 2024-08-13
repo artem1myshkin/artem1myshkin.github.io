@@ -32,6 +32,7 @@ const App = () => {
       </>
   )
 };
+//контейнер для текста (настроен специально чтобы вводимый текст совпадал с сгенерированным текстом)
 const TextContainer = ({children}: {children: React.ReactNode}) => {
     return (
         <div className="relative max-w-xl mt-3 text-3xl leading-relaxed breal-all">
@@ -40,6 +41,7 @@ const TextContainer = ({children}: {children: React.ReactNode}) => {
     );
 };
 
+//контейнер для выравнивания таймера
 const TimerContainer = ({children}: {children: React.ReactNode}) => {
     return (
         <div className="flex flex-col items-center justify-center">
@@ -47,7 +49,7 @@ const TimerContainer = ({children}: {children: React.ReactNode}) => {
         </div>
     );
 };
-
+//компонент для отображения сгенерированного текста
 const RandomText = ({text}: {text: string}) => {
     return <div className="text-gray-500">{text}</div>
 };

@@ -1,5 +1,6 @@
 import {MdRefresh} from "react-icons/md";
 import {useRef} from "react";
+//кнопка перезапуска
 const RestartButton = ({
     onRestart: handleRestart,
     className = "",
@@ -8,7 +9,7 @@ const RestartButton = ({
     className?: string;
 }) => {
     const buttonRef = useRef<HTMLButtonElement | null>(null);
-
+    //при клике убираем фокус с кнопки и запускаем функцию перезапуска тренажера
     const handleClick = () => {
         buttonRef.current!.blur();
         handleRestart();

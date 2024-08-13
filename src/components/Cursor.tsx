@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-
+//анимированный фреймер моушеном курсор, (указывает на последний введенный пользователем символ)
 const Cursor = () => {
     return (
         <motion.div
