@@ -1,0 +1,38 @@
+.image-slider {
+  position: relative; // Устанавливаем относительное позиционирование для контейнера
+  width: 100%; // Ширина 100%
+  max-width: 800px; // Максимальная ширина слайдера
+  margin: 0 auto; // Центрируем слайдер по горизонтали
+
+  .slider-button {
+    position: absolute; // Абсолютное позиционирование для стрелок
+    top: 50%; // Центрируем по вертикали
+    transform: translateY(-50%); // Убираем смещение по вертикали
+    z-index: 10; // Повышаем уровень z-index для кнопок
+    padding: 10px; // Отступы для кнопок
+    background-color: rgba(0, 0, 0, 0.7); // Полупрозрачный фон
+    color: white; // Цвет текста
+    border: none; // Убираем рамку
+    border-radius: 50%; // Закругляем кнопки
+    cursor: pointer; // Указатель курсора при наведении
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.9); // Изменяем фон при наведении
+    }
+  }
+
+  .slider-button--left {
+    left: 10px;
+  }
+
+  .slider-button--right {
+    right: 10px;
+  }
+
+  .slider-image {
+    width: 100%; // Ширина изображения 100%
+    height: auto; // Высота автоматически в зависимости от ширины
+    border-radius: 10px; // Закругляем углы изображения
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Добавляем тень к изображению
+  }
+}

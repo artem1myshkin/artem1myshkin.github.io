@@ -1,0 +1,87 @@
+@import "vars";
+
+.contacts-page {
+  background-color: $main_color_light;
+  padding-top: 45px; // Отступ сверху для секции
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.contact-title {
+  text-align: center;
+  color: $main_color;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.content-container {
+  display: flex; // Блок с инпутами и контактной информацией в ряд
+  justify-content: space-between;
+}
+
+.input-container {
+  margin-left: 350px;
+
+  .input-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+
+  .input-name,
+  .input-email {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 275px;
+    height: 45px;
+  }
+
+  .input-message {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 570px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .send-button {
+    margin-top: -20px;
+    width: 255px;
+    height: 45px;
+    margin-left: 315px;
+    background-color: $main_color;
+    border-radius: 15px;
+    border: 1px solid black;
+  }
+}
+
+.contact-info {
+  text-align: left; // Текст выравнивается по левому краю
+  margin-right: 310px; // Отступ справа от блока с текстом
+
+  .contact-item {
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+
+  .black {
+    color: black;
+  }
+
+  .main-color {
+    color: $main_color;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 20px; // Отступ между иконками
+    margin-top: 20px;
+
+    .social-icon {
+      width: 60px;
+      height: auto;
+    }
+  }
+}

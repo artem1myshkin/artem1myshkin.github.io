@@ -1,0 +1,15 @@
+@import "vars";
+
+.drawings {
+  background-color: $main_color_light;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &__image-scroller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1180px;
+    height: 960px;
+  }
+}

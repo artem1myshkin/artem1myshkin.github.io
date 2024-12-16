@@ -1,0 +1,31 @@
+@import "vars";
+
+.invintational-page {
+  background-color: $main_color_light;
+  display: flex;
+  justify-content: flex-start; // Выравнивание по началу
+  align-items: flex-start; // Выравнивание по верхнему краю
+  padding-left: 350px; // Отступ от левого края для всего блока
+  margin-bottom: -200px;
+
+  &__content {
+    display: flex; // Используем flexbox для содержимого
+    flex-direction: column; // Размещаем элементы в колонку
+    position: relative; // Устанавливаем относительное позиционирование для контента
+  }
+
+  &__text-block {
+    margin-top: 100px; // Отступ снизу для текста, чтобы оставить место для изображения
+    width: 700px;
+    height: auto; // Высота автоматически подстраивается под содержимое
+    font-size: 34px;
+    font-weight: bold;
+    color: $main_color;
+  }
+
+  &__image-block {
+    margin-left: 600px; // Отступ слева для изображения
+    width: 500px;
+    height: auto; // Высота автоматически подстраивается под изображение
+  }
+}

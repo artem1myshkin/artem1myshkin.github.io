@@ -1,0 +1,41 @@
+@import "vars";
+
+.main-page__reductions {
+  &-title {
+    margin-bottom: 110px;
+  }
+
+  &-card {
+    width: 590px; // Изменено на 590px
+    height: 190px; // Изменено на 190px
+    padding: 30px; // Удалены боковые отступы
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.25);
+
+    &__img {
+      width: 90px; // Размеры иконки
+      height: 90px; // Размеры иконки
+      margin-right: 20px; // Отступ от иконки
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column; // Элементы в колонку
+      justify-content: center; // Центрирование по вертикали
+      flex-grow: 1; // Занять доступное пространство
+    }
+
+    &__title {
+      color: $main_color;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0; // Убрать отступы
+    }
+
+    &__text {
+      font-size: 14px;
+      margin: 0; // Убрать отступы
+    }
+  }
+}

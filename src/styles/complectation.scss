@@ -1,0 +1,26 @@
+@import "vars";
+
+.complectation-page {
+  background-color: $main_color;
+  padding-bottom: 60px;
+  &__title{
+    color: $main_color_light;
+    padding-top: 45px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 92px;
+    text-transform: uppercase;
+    font-weight: 600;
+    span{
+      font-size: 30px;
+      text-transform: none;
+    }
+  }
+  &__content{
+    margin-left: 350px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 40px;
+  }
+}

@@ -1,4 +1,3 @@
-//функция подсчета ошибок
 export const totalErrors = (enteredChar: string, expectedChar: string) => {
     const expectedCharacters = expectedChar.split("");
 
@@ -10,7 +9,7 @@ export const totalErrors = (enteredChar: string, expectedChar: string) => {
         return errors;
     }, 0);
 };
-//функция подсчета слов
+
 export const totalWords = (enteredText: string, expectedText: string) => {
     const enteredWords = enteredText.trim().split(/\s+/);
     const expectedWords = expectedText.trim().split(/\s+/);

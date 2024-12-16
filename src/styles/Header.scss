@@ -1,0 +1,52 @@
+@import "./vars";
+
+.main-page__header{
+  z-index: 100;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $main_color_light;
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    background: $main_color;
+    width: 180px;
+    height: 100px;
+    margin-left: 350px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 32px;
+      color: $main_color_light;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  &-nav{
+    display: flex;
+    justify-content: space-between;
+    //padding-right: 150px;
+    //margin-left: 350px;
+    &-elem{
+      color: $main_color;
+      padding-right: 60px;
+      //font-weight: bold;
+      font-size: 32px;
+    }
+  }
+}
+
+.is-sticky {
+  z-index: 100;
+  padding: 15px 0;
+  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+  transition: all 0.3s;
+}

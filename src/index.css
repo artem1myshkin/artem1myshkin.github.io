@@ -4,6 +4,6 @@
 
 @layer base {
     body {
-        @apply min-h-screen bg-gray-800 grid place-items-center font-sans tracking-wider px-4;
+        @apply  font-sans;
     }
 }

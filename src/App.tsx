@@ -1,58 +1,26 @@
-import RestartButton from "./components/RestartButton.tsx";
-import Statistic from "./components/Statistic.tsx";
-import TypingController from "./components/TypingController.tsx";
-import useApp from "./hooks/useApp.ts";
-import CirlTimer from "./components/CircleTimer.tsx";
+
+import Header from "./components/Header.tsx";
+import MainPage from "./components/MainPage.tsx";
+import Complectation from "./components/Complectation.tsx";
+import Drawings from "./components/Drawings.tsx";
+import Montage from "./components/Montage.tsx";
+import Invintational from "./components/Invintational.tsx";
+import Patents from "./components/Patents.tsx";
+import Contacts from "./components/Contacts.tsx";
 
 const App = () => {
-    const {state, text, timeLeft, entered, errors,
-        totalEntered, restart, words, timerDuration} = useApp();
-
 
   return (
       <>
-        <TimerContainer>
-           <CirlTimer timeLeft={timeLeft} duration={timerDuration}/>
-        </TimerContainer>
-        <TextContainer>
-            <RandomText text={text}/>
-            <TypingController className="absolute inset-0" inputText={entered} text={text}/>
-        </TextContainer>
-        <RestartButton
-            className={"mx-auto mt-10 text-slate-500"}
-            onRestart={restart}
-        />
-        <Statistic
-            className="mt-10"
-            errors={errors}
-            totalWords={words}
-            totalSymbols={totalEntered}
-            state={state}
-        />
+          <Header/>
+          <MainPage/>
+          <Complectation/>
+          <Drawings/>
+          <Montage/>
+          <Invintational/>
+          <Patents/>
+          <Contacts/>
       </>
   )
 };
-//контейнер для текста (настроен специально чтобы вводимый текст совпадал с сгенерированным текстом)
-const TextContainer = ({children}: {children: React.ReactNode}) => {
-    return (
-        <div className="relative max-w-xl mt-3 text-3xl leading-relaxed breal-all">
-            {children}
-        </div>
-    );
-};
-
-//контейнер для выравнивания таймера
-const TimerContainer = ({children}: {children: React.ReactNode}) => {
-    return (
-        <div className="flex flex-col items-center justify-center">
-            {children}
-        </div>
-    );
-};
-//компонент для отображения сгенерированного текста
-const RandomText = ({text}: {text: string}) => {
-    return <div className="text-gray-500">{text}</div>
-};
-
-
 export default App

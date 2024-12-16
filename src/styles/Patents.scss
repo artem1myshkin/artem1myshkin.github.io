@@ -1,0 +1,30 @@
+@import "vars";
+
+.patent-page {
+  padding-bottom: 60px;
+  background-color: $main_color;
+  text-align: center; // Центрируем текст
+}
+
+.patent-title {
+  color: $main_color_light;
+  padding-top: 45px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 92px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.patent-images {
+  display: flex; // Выравниваем изображения в ряд
+  justify-content: center; // Центрируем изображения
+  margin-top: 20px; // Отступ сверху от заголовка до изображений
+}
+
+.patent-image {
+  border-radius: 2%;
+  width: 460px; // Ширина изображения
+  height: 650px; // Высота изображения
+  margin: 0 40px; // Отступы между изображениями
+}
