@@ -1,5 +1,6 @@
-@import "vars";
+@import "./_vars";
 
+@media (max-width: $breakpoint_xxl){
 .patent-page {
   padding-bottom: 60px;
   background-color: $main_color;
@@ -28,3 +29,51 @@
   height: 650px; // Высота изображения
   margin: 0 40px; // Отступы между изображениями
 }
+
+}
+
+@media (max-width: $breakpoint_m) {
+  .patent-title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .patent-image {
+    border-radius: 2%;
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: $breakpoint_xxs) {
+  .patent-page {
+    padding-bottom: 60px;
+    background-color: $main_color;
+    text-align: center; // Центрируем текст
+  }
+
+  .patent-title {
+    color: $main_color_light;
+    padding-top: 45px;
+    text-align: center;
+    font-size: 30px; // Меньший размер шрифта для мобильных устройств
+    line-height: 40px; // Меньшая высота строки
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .patent-images {
+    display: flex; // Используем flexbox
+    flex-direction: column; // Изменяем направление на колонку
+    align-items: center; // Центрируем изображения по горизонтали
+    margin-top: 20px; // Отступ сверху от заголовка до изображений
+  }
+
+  .patent-image {
+    border-radius: 2%;
+    width: 80%; // Изменяем ширину на 100% для мобильных устройств
+    max-width: 460px; // Ограничиваем максимальную ширину
+    height: auto; // Высота автоматически подстраивается под ширину
+    margin: 20px 0; // Отступы между изображениями по вертикали
+  }
+}
+

@@ -1,5 +1,6 @@
 @import "vars";
 
+@media (max-width: $breakpoint_xxl){
 .montage-item {
 
   &-card {
@@ -41,4 +42,66 @@
       font-size: 16px;
     }
   }
+}
+
+}
+
+@media (max-width: $breakpoint_xs){
+  .montage-item {
+
+    &-card {
+      border-radius: 2%;
+      padding: 15px;
+      width: 430px;
+
+      &__img {
+        border-radius: 2%;
+        width: 400px;
+        height: auto;
+        padding-bottom: 15px;
+      }
+
+      &__title {
+        padding: 0; // Убираем padding
+        margin-bottom: 10px; // Задаем отступ снизу для заголовка
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      &__text {
+        padding: 0; // Убираем padding
+        margin-bottom: 10px; // Задаем отступ снизу для текста
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: $breakpoint_s){
+  .montage-item {
+
+    &-card {
+      width: 380px;
+
+      &__img {
+        width: 350px;
+        height: auto;
+      }
+
+      &__title {
+        padding: 0; // Убираем padding
+        margin-bottom: 10px; // Задаем отступ снизу для заголовка
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      &__text {
+        padding: 0; // Убираем padding
+        margin-bottom: 10px; // Задаем отступ снизу для текста
+        font-size: 16px;
+      }
+    }
+  }
+
 }

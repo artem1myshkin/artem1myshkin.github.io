@@ -1,39 +1,103 @@
-@import "vars";
+@import "./_vars";
 
-.montage-page {
-  background-color: $main_color;
-  padding-bottom: 60px;
+@media (max-width: $breakpoint_xxl) {
+  .montage-page {
+    background-color: $main_color;
+    padding-bottom: 60px;
 
-  &__title {
-    color: $main_color_light;
-    padding-top: 45px;
-    padding-bottom: 30px;
-    text-align: center;
-    font-size: 40px;
-    line-height: 92px;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
+    &__title {
+      color: $main_color_light;
+      padding-top: 45px;
+      padding-bottom: 30px;
+      text-align: center;
+      font-size: 40px;
+      line-height: 92px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
 
-  &__content-container {
-    display: flex;
-    //justify-content: space-between; // Это выровняет содержимое по горизонтали
-    gap: 40px;
-    align-items: flex-start; // Выравнивание по верхнему краю
-  }
+    &__content-container {
+      display: flex;
+      //justify-content: space-between; // Это выровняет содержимое по горизонтали
+      gap: 40px;
+      align-items: flex-start; // Выравнивание по верхнему краю
+    }
 
-  &__content,
-  &__content-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    //width: 45%; // Задаем ширину для равномерного распределения
-  }
+    &__content,
+    &__content-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      //width: 45%; // Задаем ширину для равномерного распределения
+    }
 
-  &__content {
-    margin-left: 350px; // Добавляем небольшой отступ между колонками
+    &__content {
+      margin-left: 350px; // Добавляем небольшой отступ между колонками
+    }
+    &__content2 {
+      margin-left: 40px; // Добавляем небольшой отступ между колонками
+    }
   }
-  &__content2 {
-    margin-left: 40px; // Добавляем небольшой отступ между колонками
+}
+
+@media (max-width: $breakpoint_xl) {
+  .montage-page {
+    &__content {
+      margin-left: 230px; // Добавляем небольшой отступ между колонками
+    }
   }
+}
+
+@media (max-width: $breakpoint_xm) {
+  .montage-page {
+    &__content {
+      margin-left: 73px; // Добавляем небольшой отступ между колонками
+    }
+  }
+}
+
+@media (max-width: $breakpoint_l) {
+  .montage-page {
+    &__content {
+      margin-left: 20px; // Добавляем небольшой отступ между колонками
+    }
+  }
+}
+
+@media (max-width: $breakpoint_m) {
+  .montage-page__content__single-column {
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: $breakpoint_xxs) {
+  .montage-page__content__single-column {
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: $breakpoint_xs) {
+  .montage-page__content__single-column {
+    margin-left: 85px;
+  }
+}
+
+@media (max-width: $breakpoint_s) {
+  .montage-page {
+    &__title {
+      font-size: 28px;
+      line-height: 92px;
+    }
+  }
+  .montage-page__content__single-column {
+    margin-left: 35px;
+  }
+}
+
+
+.montage-page__content__single-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }

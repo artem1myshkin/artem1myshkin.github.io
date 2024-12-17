@@ -1,5 +1,6 @@
 @import "vars";
 
+@media (max-width: $breakpoint_xxl){
 .main-page__reductions {
   &-title {
     margin-bottom: 110px;
@@ -38,4 +39,58 @@
       margin: 0; // Убрать отступы
     }
   }
+}
+
+}
+
+@media (max-width: $breakpoint_xs){
+  .main-page__reductions {
+
+    &-card {
+      width: 500px; // Изменено на 590px
+      height: 160px; // Изменено на 190px
+      padding: 15px; // Удалены боковые отступы
+
+      &__img {
+        width: 70px; // Размеры иконки
+        height: 70px; // Размеры иконки
+        margin-right: 15px; // Отступ от иконки
+      }
+
+      &__title {
+        font-size: 16px;
+      }
+
+      &__text {
+        font-size: 12px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: $breakpoint_xs){
+  .main-page__reductions {
+
+    &-card {
+      width: 390px; // Изменено на 590px
+      height: 120px; // Изменено на 190px
+      padding: 10px; // Удалены боковые отступы
+
+      &__img {
+        width: 60px; // Размеры иконки
+        height: 60px; // Размеры иконки
+        margin-right: 10px; // Отступ от иконки
+      }
+
+      &__title {
+        font-size: 16px;
+      }
+
+      &__text {
+        font-size: 12px;
+      }
+    }
+  }
+
 }

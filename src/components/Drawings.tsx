@@ -1,21 +1,18 @@
 import React from "react";
-import ImageScroller from "../functionalComponents/ImageScroller.tsx";
 import "../styles/Drawings.scss";
-import im1 from "../assets/drawings/торцевая левая 1,5.jpg";
-import im2 from "../assets/drawings/торцевая правая 1,5.jpg";
-import im3 from "../assets/drawings/торцевая длинная левая 1,5.jpg";
-import im4 from "../assets/drawings/торцевая длинная правая 1,5.jpg";
-import im5 from "../assets/drawings/угол соелинительный 1,5.jpg";
+import vid1 from "../assets/ФУТАЖ ТАЙМЕР 30 СЕКУНД _ ДЛЯ ВИДЕО!.mp4";
 
 const Drawings: React.FC = () => {
-    const images = [
-        im1, im2, im3, im4, im5
-    ];
     return (
         <section className={"drawings"}>
-            <div className={"drawings__image-scroller"}>
-                <ImageScroller images={images}/>
-            </div>
+                <video
+                    src={vid1}
+                    className="drawings__image-scroller" // Дополнительный класс, если нужно
+                    controls // Включает элементы управления (play, pause и т.д.)
+                    autoPlay // Автоматическое воспроизведение
+                    loop // Зацикливание видео
+                    muted // Видео запускается без звука
+                />
         </section>
     );
 }

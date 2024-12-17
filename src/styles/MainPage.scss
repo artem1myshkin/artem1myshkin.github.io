@@ -1,50 +1,127 @@
-@import "vars";
+@import "./_vars";
 
-.main-page {
-  margin-top: 40px;
-  padding-bottom: 60px;
-  background-color: $main_color_light;
-  &__content {
-    display: flex;
-    align-items: flex-start; // Выравнивание по верхнему краю
-  }
+@media (max-width: $breakpoint_xxl){
 
-  &__image-scroller {
-    margin-left: 350px;
-    margin-top: 100px; // Отступ сверху
-    width: 720px;
-    height: 405px;
-  }
-
-  &__text-block {
-    margin-top: 80px;
-    margin-left: 30px; // Отступ между imageScroller и текстом
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 450px;
-    height: 405px;
-
-    &-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: $main_color;
+  .main-page {
+    margin-top: 40px;
+    padding-bottom: 60px;
+    background-color: $main_color_light;
+    &__content {
+      display: flex;
+      align-items: flex-start; // Выравнивание по верхнему краю
     }
 
-    &-text {
-      font-size: 16px;
-      line-height: 1.5;
+    &__image-scroller {
+      margin-left: 350px;
+      margin-top: 100px; // Отступ сверху
+      width: 720px;
+      height: 405px;
+    }
+
+    &__text-block {
+      margin-top: 80px;
+      margin-left: 30px; // Отступ между imageScroller и текстом
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 450px;
+      height: 405px;
+
+      &-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: $main_color;
+      }
+
+      &-text {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+
+    &__cards,
+    &__cards-2 {
+      display: flex;
+      justify-content: flex-start; // Выравнивание по левому краю
+      gap: 40px; // Отступы между карточками
+      margin-left: 350px; // Отступ от левого края
+      margin-top: 40px; // Отступ сверху для карточек
     }
   }
 
-  &__cards,
-  &__cards-2 {
-    display: flex;
-    justify-content: flex-start; // Выравнивание по левому краю
-    gap: 40px; // Отступы между карточками
-    margin-left: 350px; // Отступ от левого края
-    margin-top: 40px; // Отступ сверху для карточек
+}
+
+@media (max-width: $breakpoint_xl){
+  .main-page {
+    &__image-scroller {
+      margin-left: 230px;
+    }
+    &__cards,
+    &__cards-2 {
+      margin-left: 230px;
+    }
   }
 }
+
+@media (max-width: $breakpoint_xm){
+  .main-page {
+    &__image-scroller {
+      margin-left: 73px;
+    }
+    &__cards,
+    &__cards-2 {
+      margin-left: 73px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_l) {
+  .main-page {
+    &__image-scroller {
+      margin-left: 20px;
+    }
+    &__cards,
+    &__cards-2 {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_m){
+  .main-page {
+    &__text-block {
+      padding-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__image-scroller {
+      margin-left: 0;
+      width: 90%;
+      height: auto;
+    }
+
+    &__text-block {
+      margin-top: 20px;
+      margin-left: 0;
+      text-align: center;
+      width: 90%;
+      height: auto;
+    }
+  }
+
+  .main-page__cards,
+  .main-page__cards-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+

@@ -1,15 +1,28 @@
-@import "vars";
+@import "./_vars";
 
-.drawings {
-  background-color: $main_color_light;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  &__image-scroller {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 1180px;
-    height: 960px;
+@media (max-width: $breakpoint_xxl) {
+  .drawings {
+    background-color: $main_color_light;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &__image-scroller {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 1180px;
+      height: 960px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_m) {
+  .drawings {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__image-scroller {
+      width: 85%;
+      height: auto;
+    }
   }
 }

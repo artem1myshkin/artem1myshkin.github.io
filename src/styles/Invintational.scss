@@ -1,31 +1,128 @@
-@import "vars";
+@import "./_vars";
 
-.invintational-page {
-  background-color: $main_color_light;
-  display: flex;
-  justify-content: flex-start; // Выравнивание по началу
-  align-items: flex-start; // Выравнивание по верхнему краю
-  padding-left: 350px; // Отступ от левого края для всего блока
-  margin-bottom: -200px;
+@media (max-width: $breakpoint_xxl) {
+  .invintational-page {
+    background-color: $main_color_light;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 350px;
+    margin-bottom: -200px;
 
-  &__content {
-    display: flex; // Используем flexbox для содержимого
-    flex-direction: column; // Размещаем элементы в колонку
-    position: relative; // Устанавливаем относительное позиционирование для контента
-  }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
 
-  &__text-block {
-    margin-top: 100px; // Отступ снизу для текста, чтобы оставить место для изображения
-    width: 700px;
-    height: auto; // Высота автоматически подстраивается под содержимое
-    font-size: 34px;
-    font-weight: bold;
-    color: $main_color;
-  }
+    &__text-block {
+      margin-top: 100px;
+      width: 700px;
+      height: auto;
+      font-size: 34px;
+      font-weight: bold;
+      color: $main_color;
+    }
 
-  &__image-block {
-    margin-left: 600px; // Отступ слева для изображения
-    width: 500px;
-    height: auto; // Высота автоматически подстраивается под изображение
+    &__image-block {
+      margin-left: 600px;
+      width: 500px;
+      height: auto;
+    }
   }
 }
+
+@media (max-width: $breakpoint_xm) {
+  .invintational-page {
+    padding-left: 50px;
+    &__text-block {
+      padding-left: 20px;
+      font-size: 32px;
+    }
+    &__image-block {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_l) {
+  .invintational-page {
+    padding-left: 20px;
+    &__text-block {
+      padding-left: 20px;
+      font-size: 28px;
+    }
+    &__image-block {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_m) {
+  .invintational-page {
+    padding-left: 20px;
+    &__text-block {
+      padding-left: 20px;
+      font-size: 28px;
+    }
+    &__image-block {
+      margin-left: 600px;
+      margin-bottom: 120px;
+      width: 300px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_xxs) {
+  .invintational-page {
+    &__text-block {
+      padding-left: 20px;
+      font-size: 24px;
+    }
+    &__image-block {
+      margin-left: 400px;
+      margin-bottom: 120px;
+      width: 300px;
+      height: auto;
+    }
+  }
+
+}
+
+@media (max-width: $breakpoint_xs) {
+  .invintational-page {
+    &__text-block {
+      padding-left: 20px;
+      font-size: 16px;
+      width: 300px;
+      height: auto;
+    }
+    &__image-block {
+      margin-left: 200px;
+      margin-bottom: 120px;
+      width: 300px;
+      height: auto;
+    }
+  }
+
+}
+
+@media (max-width: $breakpoint_s) {
+  .invintational-page {
+    &__text-block {
+      padding-left: 20px;
+      font-size: 18px;
+      width: 300px;
+      height: auto;
+    }
+    &__image-block {
+      margin-left: 150px;
+      margin-bottom: 180px;
+      width: 200px;
+      height: auto;
+    }
+  }
+
+}
+

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link as ScrollLink } from "react-scroll";
 import "../styles/Header.scss";
+import logo from "../assets/Логотип-02.png";
 
 const Header: React.FC = () => {
 
@@ -26,10 +27,7 @@ const Header: React.FC = () => {
         <header className={classes}>
             <div className="container">
                 <div className="main-page__header-inner">
-                    <div className="main-page__header-logo">
-                        <h2>K S
-                        studio</h2>
-                    </div>
+                    <img alt={"logo"} src={logo} className="main-page__header-logo"/>
                     <nav className="main-page__header-navigation">
                         <ul className="main-page__header-nav">
                             <li className="main-page__header-nav-elem">
