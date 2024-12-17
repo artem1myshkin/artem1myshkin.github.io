@@ -1,22 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Contacts.scss";
 import telegramIcon from "../assets/Telegram_2019_Logo.svg";
 import whatsappIcon from "../assets/WhatsApp.svg";
+import { useForm } from "@formspree/react";
 
 const Contacts: React.FC = () => {
+    const [state, handleSubmit] = useForm("xeoqbllo");
+
+    // Локальный state для управления полями формы
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    // Обновление полей формы
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    // Обработка отправки формы
+    const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        await handleSubmit(e);
+        if (state.succeeded) {
+            alert("Сообщение успешно отправлено!");
+            setFormData({ name: "", email: "", message: "" }); // Очистка полей формы
+        }
+    };
+
     return (
         <section className="contacts-page">
             <h2 className="contact-title">КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
 
             <div className="content-container">
-                <div className="input-container">
+                <form onSubmit={handleFormSubmit} className="input-container">
                     <div className="input-group">
-                        <input type="text" placeholder="Имя" className="input-name" />
-                        <input type="email" placeholder="Email" className="input-email" />
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Имя"
+                            className="input-name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            className="input-email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                        />
                     </div>
-                    <textarea placeholder="Сообщение" className="input-message"></textarea>
-                    <button className="send-button">Отправить</button>
-                </div>
+                    <textarea
+                        name="message"
+                        placeholder="Сообщение"
+                        className="input-message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
+                    ></textarea>
+                    <button
+                        type="submit"
+                        className="send-button"
+                        disabled={state.submitting}
+                    >
+                        Отправить
+                    </button>
+                </form>
 
                 <div className="contact-info">
                     <p className="contact-item black">Телефон</p>
