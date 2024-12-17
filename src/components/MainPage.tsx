@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/MainPage.scss";
 import ImageScroller from "../functionalComponents/ImageScroller.tsx";
-import im1 from "../assets/195_15.png";
-import im2 from "../assets/195_2_180_3.png";
+import im1 from "../assets/im1_rr.png";
+import im2 from "../assets/im_2.png";
 import ReductionCards from "../functionalComponents/ReductionCards.tsx";
 import src1 from "../assets/cold_heat.svg";
 import src2 from "../assets/anti_bakteria.svg";
