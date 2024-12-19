@@ -3,6 +3,9 @@
 @media (max-width: $breakpoint_xxl){
 .complectation-item {
   &-card {
+    border-radius: 15px;
+    background-color: $main_color_light;
+    padding: 25px;
     margin-top: 60px;
     width: auto;
     height: auto;
@@ -20,6 +23,7 @@
 
     &__img {
       border-radius: 15px;
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.25);
       width: 450px;
       height: auto; // Сохраняем пропорции
     }
@@ -33,9 +37,8 @@
     }
 
     &__title {
-      color: $main_color_light;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 24px;
       margin-bottom: 10px;
     }
 
@@ -46,8 +49,8 @@
       margin-bottom: 20px;
 
       &__line {
-        color: $main_color_light;
-        font-size: 16px;
+        color: $main_color;
+        font-size: 18px;
         margin: 5px 0; // Отступ между строками
       }
     }
