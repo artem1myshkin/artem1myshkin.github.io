@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Drawings.scss";
-import vid1 from "../assets/ФУТАЖ ТАЙМЕР 30 СЕКУНД _ ДЛЯ ВИДЕО!.mp4";
+import vid1 from "../assets/kstudio.mp4";
 
 const Drawings: React.FC = () => {
     return (
