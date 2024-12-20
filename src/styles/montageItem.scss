@@ -105,3 +105,18 @@
   }
 
 }
+
+@media (max-width: $breakpoint_ss){
+  .montage-item {
+
+    &-card {
+      width: 300px;
+
+      &__img {
+        width: 280px;
+        height: auto;
+      }
+    }
+  }
+
+}
