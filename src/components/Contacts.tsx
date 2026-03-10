@@ -76,9 +76,9 @@ const Contacts: React.FC = () => {
                     <p className="contact-item black">Телефон</p>
                     <p className="contact-item main-color">+79260726664</p>
                     <p className="contact-item black">Email</p>
-                    <p className="contact-item main-color">studioks10@gmail.com</p>
+                    <p className="contact-item main-color">Stas7110@yandex.ru</p>
                     <div className="social-icons">
-                        <a href="https://t.me/papich_enjoyer" target="_blank" rel="noopener noreferrer">
+                        <a href="https://t.me/79260726664" target="_blank" rel="noopener noreferrer">
                             <img src={telegramIcon} alt="Telegram" className="social-icon"/>
                         </a>
                         <a href="https://wa.me/79260726664" target="_blank" rel="noopener noreferrer">
